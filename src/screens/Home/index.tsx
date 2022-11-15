@@ -78,7 +78,7 @@ export default function Home() {
                 <ClipBoard style={styles.clipBoard}/>
                 <Text style={styles.tasksEmpty}>
                 Você ainda não tem tarefas cadastradas
-                Crie tarefas e organize seus itens a fazer
+                Crie tarefas e organize seus itens a fazer.
                 </Text>
                 </View>
         </View>
