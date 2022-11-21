@@ -11,8 +11,8 @@ export default function Home() {
 
     const [taskLista, setTaskLista]  = useState<string[]>([]);
     const [tasksItem, setTasksItem ] = useState('');
-
-
+    const taskCreated = taskLista.length
+    
 
     const [loaded] = useFonts({
         inter: require('../../assets/fonts/InterB.ttf')
@@ -21,17 +21,14 @@ export default function Home() {
         return null;
     }
 
-    
 
     function taskCompleted() {
-
-    }
-    function taskDelect(taskLista: string) {
-
-
         
+    }
 
 
+    
+    function taskDelect(taskLista: string) {
 
         Alert.alert("Remover", `Deseja remover a Tarefa? ${taskLista}`, [
             {
@@ -53,7 +50,6 @@ export default function Home() {
         setTaskLista(prevState => [...prevState, tasksItem]);
         setTasksItem('');
     }
-
 
     return (
         <View style={styles.container}>
@@ -100,8 +96,9 @@ export default function Home() {
                         Criadas
 
                     </Text>
-                    <Text style={styles.counterButton}>
-                        0
+                    <Text style={styles.counterButton}
+                    >
+                        {taskCreated}
                     </Text>
                 </View >
                 <View style={styles.counter}>
