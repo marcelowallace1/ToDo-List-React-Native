@@ -12,7 +12,6 @@ export default function Home() {
     const [taskLista, setTaskLista]  = useState<string[]>([]);
     const [tasksItem, setTasksItem ] = useState('');
     const taskCreated = taskLista.length
-    
 
     const [loaded] = useFonts({
         inter: require('../../assets/fonts/InterB.ttf')
@@ -22,9 +21,7 @@ export default function Home() {
     }
 
 
-    function taskCompleted() {
-        
-    }
+
 
 
     
